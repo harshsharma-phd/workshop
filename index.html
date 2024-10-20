@@ -21,9 +21,11 @@
             align-items: center;
             flex-wrap: wrap; /* Added for better alignment */
         }
+        header a {
+            margin: 0 20px; /* Space between logos */
+        }
         header img {
             width: 130px; /* Further increased size for QuICST logo */
-            margin: 0 20px;
         }
         h1 {
             font-size: 1.8em;
@@ -142,9 +144,13 @@
 <body>
 
 <header>
-    <img src="IITB-Logo.png" alt="IIT Bombay Logo">
+    <a href="https://www.iitb.ac.in" target="_blank">
+        <img src="IITB-Logo.png" alt="IIT Bombay Logo">
+    </a>
     <h1>Workshop on Quantum Information and Quantum Dynamics</h1>
-    <img src="QuICST-Logo.png" alt="QuICST Logo" style="width: 180px;"> <!-- Further increased size for visibility -->
+    <a href="https://www.quicst.org" target="_blank">
+        <img src="QuICST-Logo.png" alt="QuICST Logo" style="width: 200px;"> <!-- Further increased size for visibility -->
+    </a>
 </header>
 
 <!-- Registration Section -->
