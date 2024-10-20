@@ -19,14 +19,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap; /* Added for better alignment */
         }
         header img {
-            width: 100px; /* Increased size for QuICST logo */
+            width: 130px; /* Further increased size for QuICST logo */
             margin: 0 20px;
         }
         h1 {
             font-size: 1.8em;
             margin: 0;
+            flex: 1; /* Allow the title to take available space */
         }
         section {
             max-width: 1100px;
@@ -122,6 +124,23 @@
             color: white;
             margin-top: 50px;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header img {
+                width: 100px; /* Adjusted size for smaller screens */
+            }
+            h1 {
+                font-size: 1.5em; /* Responsive title size */
+            }
+            .session-card {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+            .btn {
+                padding: 10px 20px; /* Adjust button size */
+                font-size: 1em; /* Responsive button size */
+            }
+        }
     </style>
 </head>
 <body>
@@ -129,7 +148,7 @@
 <header>
     <img src="IITB-Logo.png" alt="IIT Bombay Logo">
     <h1>Workshop on Quantum Information and Quantum Dynamics</h1>
-    <img src="QuICST-Logo.png" alt="QuICST Logo" style="width: 120px;"> <!-- Increased size for visibility -->
+    <img src="QuICST-Logo.png" alt="QuICST Logo" style="width: 140px;"> <!-- Further increased size for visibility -->
 </header>
 
 <!-- Registration Section -->
@@ -138,7 +157,7 @@
     <p>The <strong>Workshop on Quantum Information and Quantum Dynamics</strong> aims to gather leading experts and researchers in the field to discuss recent advancements and explore collaborative opportunities. Participants will engage in insightful discussions and presentations, fostering knowledge exchange and partnership in quantum science. This workshop is funded by <strong>Seed Funding for Collaboration and Partnership Projects, IRCC, IIT Bombay</strong> and organized by the <strong>Department of Physics, IIT Bombay</strong>.</p>
     <p><strong>Date:</strong> 29 October 2024</p>
     <p><strong>Venue:</strong> Room No. 23, Victor Menezes Convention Centre, IIT Bombay</p>
-    <a href="https://forms.gle/CE5rpfhuZwgxrXW17" class="btn">Register Here</a>
+    <a href="https://forms.gle/CE5rpfhuZwgxrXW17" class="btn" target="_blank">Register Here</a>
 </section>
 
 <!-- Schedule Section -->
