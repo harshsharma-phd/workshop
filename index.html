@@ -4,73 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop on Quantum Information and Quantum Dynamics</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #00274d;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header img {
+            width: 100px;
+            margin: 0 15px;
+            vertical-align: middle;
+        }
+        h1 {
+            display: inline-block;
+            margin: 0;
+            vertical-align: middle;
+        }
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .schedule {
+            margin: 20px 0;
+        }
+        .session {
+            margin: 15px 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .session time {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .dropdown {
+            margin-top: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #00274d;
+        }
+        .session:hover .dropdown-content {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #00274d;
+            color: white;
+        }
+        .centered {
+            text-align: center;
+        }
+        .btn {
+            background-color: #00274d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logos">
-            <img src="iit_bombay_logo.png" alt="IIT Bombay Logo" class="logo">
-            <img src="quicst_logo.png" alt="QuICST Logo" class="logo">
+
+<header>
+    <img src="iit_bombay_logo.png" alt="IIT Bombay Logo">
+    <h1>Workshop on Quantum Information and Quantum Dynamics</h1>
+    <img src="quicst_logo.png" alt="QuICST Logo">
+</header>
+
+<section>
+    <h2>Schedule - 29 October 2024</h2>
+    <div class="schedule">
+        <div class="session">
+            <time>09:45-10:00</time> Coffee and Welcome Note
         </div>
-        <h1>Workshop on Quantum Information and Quantum Dynamics</h1>
-        <p>Funded by: Seed Funding for Collaboration and Partnership Projects, IRCC, IIT Bombay</p>
-        <p>Organized by: Department of Physics, IIT Bombay</p>
-        <p>Date: 29 October 2024</p>
-    </header>
 
-    <section>
-        <h2>Schedule</h2>
-        <ul class="schedule">
-            <li>09:45 - 10:00 Coffee and Welcome Note</li>
-            <li>Morning Session</li>
-            <li>10:00 - 10:45 <button class="dropdown-btn">Sai Vinjanampathy</button>
-                <div class="dropdown-content">Title and Abstract will be added later.</div>
-            </li>
-            <li>10:45 - 11:00 Coffee</li>
-            <li>11:00 - 11:45 <button class="dropdown-btn">Aditi Sen De</button>
-                <div class="dropdown-content">Title and Abstract will be added later.</div>
-            </li>
-            <li>11:45 - 12:30 <button class="dropdown-btn">Hoi-Kwan Lau</button>
-                <div class="dropdown-content">Title and Abstract will be added later.</div>
-            </li>
-            <li>12:30 - 14:00 Lunch Break</li>
-            <li>Afternoon Session</li>
-            <li>14:00 - 14:45 <button class="dropdown-btn">Pavithran Iyer</button>
-                <div class="dropdown-content">Title and Abstract will be added later.</div>
-            </li>
-            <li>14:45 - 15:30 <button class="dropdown-btn">Sudipto Singha Roy</button>
-                <div class="dropdown-content">Title and Abstract will be added later.</div>
-            </li>
-            <li>15:30 - 16:00 Coffee</li>
-            <li>16:00 - 16:45 <button class="dropdown-btn">Anindita Bera</button>
-                <div class="dropdown-content">Title and Abstract will be added later.</div>
-            </li>
-            <li>16:45 - 17:30 <button class="dropdown-btn">Siddhartha Santra</button>
-                <div class="dropdown-content">Title and Abstract will be added later.</div>
-            </li>
-            <li>17:30 - 17:35 Closing Remarks</li>
-        </ul>
-    </section>
+        <h3>Morning Session</h3>
+        <div class="session">
+            <time>10:00-10:45</time> Sai Vinjanampathy
+            <div class="dropdown">
+                <a href="#">More Info</a>
+                <div class="dropdown-content">
+                    <p><strong>Title:</strong> To be added later</p>
+                    <p><strong>Abstract:</strong> To be added later</p>
+                </div>
+            </div>
+        </div>
+        <div class="session">
+            <time>10:45-11:00</time> Coffee
+        </div>
+        <div class="session">
+            <time>11:00-11:45</time> Aditi Sen De
+            <div class="dropdown">
+                <a href="#">More Info</a>
+                <div class="dropdown-content">
+                    <p><strong>Title:</strong> To be added later</p>
+                    <p><strong>Abstract:</strong> To be added later</p>
+                </div>
+            </div>
+        </div>
+        <div class="session">
+            <time>11:45-12:30</time> Hoi-Kwan Lau
+            <div class="dropdown">
+                <a href="#">More Info</a>
+                <div class="dropdown-content">
+                    <p><strong>Title:</strong> To be added later</p>
+                    <p><strong>Abstract:</strong> To be added later</p>
+                </div>
+            </div>
+        </div>
+        <div class="session">
+            <time>12:30-14:00</time> Lunch Break
+        </div>
 
-    <section>
-        <h2>Venue</h2>
-        <p>Details to be added later</p>
-    </section>
+        <h3>Afternoon Session</h3>
+        <div class="session">
+            <time>14:00-14:45</time> Pavithran Iyer
+            <div class="dropdown">
+                <a href="#">More Info</a>
+                <div class="dropdown-content">
+                    <p><strong>Title:</strong> To be added later</p>
+                    <p><strong>Abstract:</strong> To be added later</p>
+                </div>
+            </div>
+        </div>
+        <div class="session">
+            <time>14:45-15:30</time> Sudipto Singha Roy
+            <div class="dropdown">
+                <a href="#">More Info</a>
+                <div class="dropdown-content">
+                    <p><strong>Title:</strong> To be added later</p>
+                    <p><strong>Abstract:</strong> To be added later</p>
+                </div>
+            </div>
+        </div>
+        <div class="session">
+            <time>15:30-16:00</time> Coffee
+        </div>
+        <div class="session">
+            <time>16:00-16:45</time> Anindita Bera
+            <div class="dropdown">
+                <a href="#">More Info</a>
+                <div class="dropdown-content">
+                    <p><strong>Title:</strong> To be added later</p>
+                    <p><strong>Abstract:</strong> To be added later</p>
+                </div>
+            </div>
+        </div>
+        <div class="session">
+            <time>16:45-17:30</time> Siddhartha Santra
+            <div class="dropdown">
+                <a href="#">More Info</a>
+                <div class="dropdown-content">
+                    <p><strong>Title:</strong> To be added later</p>
+                    <p><strong>Abstract:</strong> To be added later</p>
+                </div>
+            </div>
+        </div>
+        <div class="session">
+            <time>17:30-17:35</time> Closing Remarks
+        </div>
+    </div>
 
-    <section>
-        <h2>Registration</h2>
-        <p><a href="#" class="link-disabled">Google Form - Registration link to be added later</a></p>
-    </section>
+    <div class="centered">
+        <p><strong>Venue:</strong> To be added later</p>
+        <a href="#" class="btn">Register Here</a>
+    </div>
+</section>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Details to be added later</p>
-    </section>
+<section>
+    <h2>Contact</h2>
+    <p><strong>Organisers:</strong> To be added later</p>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Department of Physics, IIT Bombay</p>
-    </footer>
+<footer>
+    &copy; 2024 Department of Physics, IIT Bombay
+</footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
