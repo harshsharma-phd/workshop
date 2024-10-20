@@ -45,17 +45,16 @@
             background-color: white;
             border-radius: 10px;
             box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         h2 {
-            text-align: center;
             color: #333;
             font-size: 1.7em;
             margin-bottom: 30px;
         }
 
         p {
-            text-align: center;
             color: #555;
         }
 
@@ -162,6 +161,19 @@
             font-size: 0.9em;
         }
 
+        /* Center-aligning specific sections */
+        .venue, .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .centered p {
+            text-align: center;
+            max-width: 800px;
+        }
+
         /* Responsive Styling */
         @media (max-width: 768px) {
             header img {
@@ -203,7 +215,7 @@
     </a>
 </header>
 
-<section>
+<section class="centered">
     <h2>Workshop Details and Registration</h2>
     <p>The <strong>Workshop on Quantum Information and Quantum Dynamics</strong> will gather leading experts and researchers to explore the latest developments in quantum science. Participants will engage in insightful discussions and presentations on quantum information, quantum dynamics, and more. This workshop is funded by <strong>Seed Funding for Collaboration and Partnership Projects, IRCC, IIT Bombay</strong> and organized by the <strong>Department of Physics, IIT Bombay</strong>.</p>
     <p><strong>Date:</strong> 29 October 2024</p>
