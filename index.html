@@ -6,68 +6,95 @@
     <title>Workshop on Quantum Information and Quantum Dynamics</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9fafb;
         }
         header {
             background-color: #00274d;
             color: white;
-            padding: 15px 0;
+            padding: 20px 0;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         header img {
-            width: 100px;
-            margin: 0 15px;
-            vertical-align: middle;
+            width: 80px;
+            margin: 0 20px;
         }
         h1 {
-            display: inline-block;
+            font-size: 1.8em;
             margin: 0;
-            vertical-align: middle;
         }
         section {
-            max-width: 1200px;
-            margin: 20px auto;
+            max-width: 1100px;
+            margin: 40px auto;
             padding: 20px;
             background-color: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
         }
         h2 {
             text-align: center;
             color: #333;
+            font-size: 1.5em;
+            margin-bottom: 30px;
         }
         .schedule {
-            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
-        .session {
-            margin: 15px 0;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+        .session-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            transition: box-shadow 0.3s ease-in-out;
         }
-        .session time {
+        .session-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .time {
+            font-size: 1.2em;
             font-weight: bold;
-            margin-right: 10px;
+            color: #00274d;
+            margin-right: 20px;
+            width: 100px;
+            text-align: right;
+        }
+        .details {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .session-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
         }
         .dropdown {
             margin-top: 5px;
+            font-size: 0.9em;
+            color: #666;
+            cursor: pointer;
         }
         .dropdown-content {
             display: none;
-            margin: 10px 0;
+            margin-top: 10px;
             padding: 10px;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             border-left: 4px solid #00274d;
+            border-radius: 4px;
         }
-        .session:hover .dropdown-content {
+        .session-card:hover .dropdown-content {
             display: block;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #00274d;
-            color: white;
         }
         .centered {
             text-align: center;
@@ -80,6 +107,13 @@
             border-radius: 5px;
             margin-top: 20px;
             display: inline-block;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00274d;
+            color: white;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -94,94 +128,116 @@
 <section>
     <h2>Schedule - 29 October 2024</h2>
     <div class="schedule">
-        <div class="session">
-            <time>09:45-10:00</time> Coffee and Welcome Note
+        <div class="session-card">
+            <div class="time">09:45-10:00</div>
+            <div class="details">
+                <span class="session-title">Coffee and Welcome Note</span>
+            </div>
         </div>
 
         <h3>Morning Session</h3>
-        <div class="session">
-            <time>10:00-10:45</time> Sai Vinjanampathy
-            <div class="dropdown">
-                <a href="#">More Info</a>
+        <div class="session-card">
+            <div class="time">10:00-10:45</div>
+            <div class="details">
+                <span class="session-title">Sai Vinjanampathy</span>
+                <div class="dropdown">More Info</div>
                 <div class="dropdown-content">
                     <p><strong>Title:</strong> To be added later</p>
                     <p><strong>Abstract:</strong> To be added later</p>
                 </div>
             </div>
         </div>
-        <div class="session">
-            <time>10:45-11:00</time> Coffee
+        <div class="session-card">
+            <div class="time">10:45-11:00</div>
+            <div class="details">
+                <span class="session-title">Coffee Break</span>
+            </div>
         </div>
-        <div class="session">
-            <time>11:00-11:45</time> Aditi Sen De
-            <div class="dropdown">
-                <a href="#">More Info</a>
+        <div class="session-card">
+            <div class="time">11:00-11:45</div>
+            <div class="details">
+                <span class="session-title">Aditi Sen De</span>
+                <div class="dropdown">More Info</div>
                 <div class="dropdown-content">
                     <p><strong>Title:</strong> To be added later</p>
                     <p><strong>Abstract:</strong> To be added later</p>
                 </div>
             </div>
         </div>
-        <div class="session">
-            <time>11:45-12:30</time> Hoi-Kwan Lau
-            <div class="dropdown">
-                <a href="#">More Info</a>
+        <div class="session-card">
+            <div class="time">11:45-12:30</div>
+            <div class="details">
+                <span class="session-title">Hoi-Kwan Lau</span>
+                <div class="dropdown">More Info</div>
                 <div class="dropdown-content">
                     <p><strong>Title:</strong> To be added later</p>
                     <p><strong>Abstract:</strong> To be added later</p>
                 </div>
             </div>
         </div>
-        <div class="session">
-            <time>12:30-14:00</time> Lunch Break
+        <div class="session-card">
+            <div class="time">12:30-14:00</div>
+            <div class="details">
+                <span class="session-title">Lunch Break</span>
+            </div>
         </div>
 
         <h3>Afternoon Session</h3>
-        <div class="session">
-            <time>14:00-14:45</time> Pavithran Iyer
-            <div class="dropdown">
-                <a href="#">More Info</a>
+        <div class="session-card">
+            <div class="time">14:00-14:45</div>
+            <div class="details">
+                <span class="session-title">Pavithran Iyer</span>
+                <div class="dropdown">More Info</div>
                 <div class="dropdown-content">
                     <p><strong>Title:</strong> To be added later</p>
                     <p><strong>Abstract:</strong> To be added later</p>
                 </div>
             </div>
         </div>
-        <div class="session">
-            <time>14:45-15:30</time> Sudipto Singha Roy
-            <div class="dropdown">
-                <a href="#">More Info</a>
+        <div class="session-card">
+            <div class="time">14:45-15:30</div>
+            <div class="details">
+                <span class="session-title">Sudipto Singha Roy</span>
+                <div class="dropdown">More Info</div>
                 <div class="dropdown-content">
                     <p><strong>Title:</strong> To be added later</p>
                     <p><strong>Abstract:</strong> To be added later</p>
                 </div>
             </div>
         </div>
-        <div class="session">
-            <time>15:30-16:00</time> Coffee
+        <div class="session-card">
+            <div class="time">15:30-16:00</div>
+            <div class="details">
+                <span class="session-title">Coffee Break</span>
+            </div>
         </div>
-        <div class="session">
-            <time>16:00-16:45</time> Anindita Bera
-            <div class="dropdown">
-                <a href="#">More Info</a>
+        <div class="session-card">
+            <div class="time">16:00-16:45</div>
+            <div class="details">
+                <span class="session-title">Anindita Bera</span>
+                <div class="dropdown">More Info</div>
                 <div class="dropdown-content">
                     <p><strong>Title:</strong> To be added later</p>
                     <p><strong>Abstract:</strong> To be added later</p>
                 </div>
             </div>
         </div>
-        <div class="session">
-            <time>16:45-17:30</time> Siddhartha Santra
-            <div class="dropdown">
-                <a href="#">More Info</a>
+        <div class="session-card">
+            <div class="time">16:45-17:30</div>
+            <div class="details">
+                <span class="session-title">Siddhartha Santra</span>
+                <div class="dropdown">More Info</div>
                 <div class="dropdown-content">
                     <p><strong>Title:</strong> To be added later</p>
                     <p><strong>Abstract:</strong> To be added later</p>
                 </div>
             </div>
         </div>
-        <div class="session">
-            <time>17:30-17:35</time> Closing Remarks
+        <div class="session-card">
+            <div class="time">17:30-17:35</div>
+            <div class="details">
+                <span class="session-title">Closing Remarks</span>
+            </div>
         </div>
     </div>
 
