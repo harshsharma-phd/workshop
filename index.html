@@ -6,107 +6,123 @@
     <title>Workshop on Quantum Information and Quantum Dynamics</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f5f5f5;
+            line-height: 1.6;
         }
+
+        /* Banner section */
         header {
             background-color: #4267B2; /* Facebook Blue */
             color: white;
             padding: 20px 0;
-            text-align: center;
             display: flex;
-            justify-content: center;
             align-items: center;
-            flex-wrap: wrap; /* Added for better alignment */
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        header a {
-            margin: 0 20px; /* Space between logos */
-        }
-        header img {
-            width: 130px; /* Further increased size for QuICST logo */
-        }
-        h1 {
+
+        header h1 {
+            flex: 1;
             font-size: 1.8em;
+            text-align: center;
             margin: 0;
-            flex: 1; /* Allow the title to take available space */
         }
+
+        header img {
+            margin: 0 15px;
+            max-width: 140px;
+            height: auto;
+        }
+
+        /* Main Content */
         section {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto;
             padding: 20px;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
             text-align: center;
-            color: #004d4d;
-            font-size: 1.5em;
+            color: #333;
+            font-size: 1.7em;
             margin-bottom: 30px;
         }
-        .centered {
+
+        p {
             text-align: center;
+            color: #555;
         }
-        .btn {
+
+        /* Registration Button */
+        .centered .btn {
             background-color: #ff6f61;
             color: white;
-            padding: 12px 25px;
+            padding: 15px 35px;
+            font-size: 1.2em;
             text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 5px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
             margin-top: 20px;
             display: inline-block;
-            transition: background-color 0.3s ease;
         }
-        .btn:hover {
+
+        .centered .btn:hover {
             background-color: #e55b4e;
         }
+
+        /* Schedule section */
         .schedule {
             display: flex;
             flex-direction: column;
             gap: 20px;
             align-items: center;
         }
+
         .session-card {
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: #fff;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            width: 80%;
-            transition: box-shadow 0.3s ease-in-out;
+            width: 85%;
             text-align: center;
+            transition: transform 0.3s ease;
         }
+
         .session-card:hover {
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
         }
+
         .time {
             font-size: 1.2em;
             font-weight: bold;
             color: #004d4d;
             margin-bottom: 10px;
         }
-        .details {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+
         .session-title {
             font-size: 1.1em;
             font-weight: bold;
             color: #333;
             margin-bottom: 10px;
         }
+
+        /* Dropdown for session details */
         .dropdown {
             font-size: 0.9em;
             color: #666;
             cursor: pointer;
-            margin-bottom: 10px;
+            margin-top: 10px;
         }
+
         .dropdown-content {
             display: none;
             margin-top: 10px;
@@ -115,31 +131,47 @@
             border-left: 4px solid #004d4d;
             border-radius: 4px;
             width: 100%;
+            text-align: left;
         }
-        .session-card:hover .dropdown-content {
+
+        .session-card.active .dropdown-content {
             display: block;
         }
 
-        /* Show dropdown content on mobile */
+        /* Venue section */
+        .venue {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        /* Responsive Styling */
         @media (max-width: 768px) {
-            .dropdown-content {
-                display: block; /* Always show on mobile */
-            }
             header img {
-                width: 100px; /* Adjusted size for smaller screens */
+                max-width: 100px;
             }
-            h1 {
-                font-size: 1.5em; /* Responsive title size */
+
+            header h1 {
+                font-size: 1.4em;
             }
+
             .session-card {
-                width: 90%; /* Adjust width for smaller screens */
+                width: 95%;
             }
-            .btn {
-                padding: 10px 20px; /* Adjust button size */
-                font-size: 1em; /* Responsive button size */
+
+            .centered .btn {
+                padding: 12px 25px;
+                font-size: 1em;
             }
         }
     </style>
+
+    <script>
+        // Toggle Dropdown Functionality for Session Details
+        function toggleDropdown(event) {
+            const card = event.target.closest('.session-card');
+            card.classList.toggle('active');
+        }
+    </script>
 </head>
 <body>
 
@@ -149,146 +181,125 @@
     </a>
     <h1>Workshop on Quantum Information and Quantum Dynamics</h1>
     <a href="https://www.quicst.org" target="_blank">
-        <img src="QuICST-Logo.png" alt="QuICST Logo" style="width: 200px;"> <!-- Further increased size for visibility -->
+        <img src="QuICST-Logo.png" alt="QuICST Logo" style="width: 200px;">
     </a>
 </header>
 
-<!-- Registration Section -->
 <section class="centered">
     <h2>Workshop Details and Registration</h2>
-    <p>The <strong>Workshop on Quantum Information and Quantum Dynamics</strong> aims to gather leading experts and researchers in the field to discuss recent advancements and explore collaborative opportunities. Participants will engage in insightful discussions and presentations, fostering knowledge exchange and partnership in quantum science. This workshop is funded by <strong>Seed Funding for Collaboration and Partnership Projects, IRCC, IIT Bombay</strong> and organized by the <strong>Department of Physics, IIT Bombay</strong>.</p>
+    <p>The <strong>Workshop on Quantum Information and Quantum Dynamics</strong> will gather leading experts and researchers to explore the latest developments in quantum science. Participants will engage in insightful discussions and presentations on quantum information, quantum dynamics, and more. This workshop is funded by <strong>Seed Funding for Collaboration and Partnership Projects, IRCC, IIT Bombay</strong> and organized by the <strong>Department of Physics, IIT Bombay</strong>.</p>
     <p><strong>Date:</strong> 29 October 2024</p>
     <p><strong>Venue:</strong> Room No. 23, Victor Menezes Convention Centre, IIT Bombay</p>
     <a href="https://forms.gle/CE5rpfhuZwgxrXW17" class="btn" target="_blank">Register Here</a>
 </section>
 
-<!-- Schedule Section -->
 <section>
     <h2>Schedule</h2>
     <div class="schedule">
         <div class="session-card">
             <div class="time">09:45-10:00</div>
-            <div class="details">
-                <span class="session-title">Coffee and Welcome Note</span>
-            </div>
+            <div class="session-title">Coffee and Welcome Note</div>
         </div>
 
         <h3>Morning Session</h3>
         <div class="session-card">
             <div class="time">10:00-10:45</div>
-            <div class="details">
-                <span class="session-title">Sai Vinjanampathy</span>
-                <div class="dropdown">More Info</div>
-                <div class="dropdown-content">
-                    <p><strong>Title:</strong> To be added later</p>
-                    <p><strong>Abstract:</strong> To be added later</p>
-                </div>
+            <div class="session-title">Sai Vinjanampathy</div>
+            <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
+            <div class="dropdown-content">
+                <p><strong>Title:</strong> To be added later</p>
+                <p><strong>Abstract:</strong> To be added later</p>
             </div>
         </div>
+
         <div class="session-card">
             <div class="time">10:45-11:00</div>
-            <div class="details">
-                <span class="session-title">Coffee Break</span>
-            </div>
+            <div class="session-title">Coffee Break</div>
         </div>
+
         <div class="session-card">
             <div class="time">11:00-11:45</div>
-            <div class="details">
-                <span class="session-title">Aditi Sen De</span>
-                <div class="dropdown">More Info</div>
-                <div class="dropdown-content">
-                    <p><strong>Title:</strong> To be added later</p>
-                    <p><strong>Abstract:</strong> To be added later</p>
-                </div>
+            <div class="session-title">Aditi Sen De</div>
+            <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
+            <div class="dropdown-content">
+                <p><strong>Title:</strong> To be added later</p>
+                <p><strong>Abstract:</strong> To be added later</p>
             </div>
         </div>
+
         <div class="session-card">
             <div class="time">11:45-12:30</div>
-            <div class="details">
-                <span class="session-title">Hoi-Kwan Lau</span>
-                <div class="dropdown">More Info</div>
-                <div class="dropdown-content">
-                    <p><strong>Title:</strong> To be added later</p>
-                    <p><strong>Abstract:</strong> To be added later</p>
-                </div>
+            <div class="session-title">Hoi-Kwan Lau</div>
+            <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
+            <div class="dropdown-content">
+                <p><strong>Title:</strong> To be added later</p>
+                <p><strong>Abstract:</strong> To be added later</p>
             </div>
         </div>
+
         <div class="session-card">
             <div class="time">12:30-14:00</div>
-            <div class="details">
-                <span class="session-title">Lunch Break</span>
-            </div>
+            <div class="session-title">Lunch Break</div>
         </div>
 
         <h3>Afternoon Session</h3>
         <div class="session-card">
             <div class="time">14:00-14:45</div>
-            <div class="details">
-                <span class="session-title">Pavithran Iyer</span>
-                <div class="dropdown">More Info</div>
-                <div class="dropdown-content">
-                    <p><strong>Title:</strong> To be added later</p>
-                    <p><strong>Abstract:</strong> To be added later</p>
-                </div>
+            <div class="session-title">Pavithran Iyer</div>
+            <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
+            <div class="dropdown-content">
+                <p><strong>Title:</strong> To be added later</p>
+                <p><strong>Abstract:</strong> To be added later</p>
             </div>
         </div>
+
         <div class="session-card">
             <div class="time">14:45-15:30</div>
-            <div class="details">
-                <span class="session-title">Sudipto Singha Roy</span>
-                <div class="dropdown">More Info</div>
-                <div class="dropdown-content">
-                    <p><strong>Title:</strong> To be added later</p>
-                    <p><strong>Abstract:</strong> To be added later</p>
-                </div>
+            <div class="session-title">Sudipto Singha Roy</div>
+            <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
+            <div class="dropdown-content">
+                <p><strong>Title:</strong> To be added later</p>
+                <p><strong>Abstract:</strong> To be added later</p>
             </div>
         </div>
+
         <div class="session-card">
             <div class="time">15:30-16:00</div>
-            <div class="details">
-                <span class="session-title">Coffee Break</span>
-            </div>
+            <div class="session-title">Coffee Break</div>
         </div>
+
         <div class="session-card">
             <div class="time">16:00-16:45</div>
-            <div class="details">
-                <span class="session-title">Anindita Bera</span>
-                <div class="dropdown">More Info</div>
-                <div class="dropdown-content">
-                    <p><strong>Title:</strong> To be added later</p>
-                    <p><strong>Abstract:</strong> To be added later</p>
-                </div>
+            <div class="session-title">Anindita Bera</div>
+            <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
+            <div class="dropdown-content">
+                <p><strong>Title:</strong> To be added later</p>
+                <p><strong>Abstract:</strong> To be added later</p>
             </div>
         </div>
+
         <div class="session-card">
             <div class="time">16:45-17:30</div>
-            <div class="details">
-                <span class="session-title">Siddhartha Santra</span>
-                <div class="dropdown">More Info</div>
-                <div class="dropdown-content">
-                    <p><strong>Title:</strong> To be added later</p>
-                    <p><strong>Abstract:</strong> To be added later</p>
-                </div>
+            <div class="session-title">Siddhartha Santra</div>
+            <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
+            <div class="dropdown-content">
+                <p><strong>Title:</strong> To be added later</p>
+                <p><strong>Abstract:</strong> To be added later</p>
             </div>
         </div>
+
         <div class="session-card">
             <div class="time">17:30-17:35</div>
-            <div class="details">
-                <span class="session-title">Closing Remarks</span>
-            </div>
+            <div class="session-title">Closing Remarks</div>
         </div>
     </div>
 </section>
 
-<!-- Organisers Section -->
-<section>
-    <h2>Contact the Organisers</h2>
-    <p class="centered"><strong>Organisers:</strong> To be added later</p>
+<section class="venue">
+    <h2>Venue and Contact</h2>
+    <p><strong>Room No. 23, Victor Menezes Convention Centre, IIT Bombay</strong></p>
+    <p>Contact details to be added later</p>
 </section>
-
-<footer>
-    &copy; 2024 Department of Physics, IIT Bombay
-</footer>
 
 </body>
 </html>
