@@ -42,20 +42,40 @@
             font-size: 1.5em;
             margin-bottom: 30px;
         }
+        .centered {
+            text-align: center;
+        }
+        .btn {
+            background-color: #00274d;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #004080;
+        }
         .schedule {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            align-items: center;
         }
         .session-card {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 15px;
+            padding: 20px;
+            width: 80%;
             transition: box-shadow 0.3s ease-in-out;
+            text-align: center;
         }
         .session-card:hover {
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
@@ -64,26 +84,24 @@
             font-size: 1.2em;
             font-weight: bold;
             color: #00274d;
-            margin-right: 20px;
-            width: 100px;
-            text-align: right;
+            margin-bottom: 10px;
         }
         .details {
-            flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            align-items: center;
         }
         .session-title {
             font-size: 1.1em;
             font-weight: bold;
             color: #333;
+            margin-bottom: 10px;
         }
         .dropdown {
-            margin-top: 5px;
             font-size: 0.9em;
             color: #666;
             cursor: pointer;
+            margin-bottom: 10px;
         }
         .dropdown-content {
             display: none;
@@ -92,21 +110,10 @@
             background-color: #f4f4f4;
             border-left: 4px solid #00274d;
             border-radius: 4px;
+            width: 100%;
         }
         .session-card:hover .dropdown-content {
             display: block;
-        }
-        .centered {
-            text-align: center;
-        }
-        .btn {
-            background-color: #00274d;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            display: inline-block;
         }
         footer {
             text-align: center;
@@ -120,11 +127,18 @@
 <body>
 
 <header>
-    <img src="iit_bombay_logo.png" alt="IIT Bombay Logo">
+    <img src="IITB-Logo.png" alt="IIT Bombay Logo">
     <h1>Workshop on Quantum Information and Quantum Dynamics</h1>
-    <img src="quicst_logo.png" alt="QuICST Logo">
+    <img src="QuICST-Logo.png" alt="QuICST Logo">
 </header>
 
+<!-- Registration Section -->
+<section class="centered">
+    <h2>Register for the Workshop</h2>
+    <a href="#" class="btn">Register Here</a>
+</section>
+
+<!-- Schedule Section -->
 <section>
     <h2>Schedule - 29 October 2024</h2>
     <div class="schedule">
@@ -240,16 +254,12 @@
             </div>
         </div>
     </div>
-
-    <div class="centered">
-        <p><strong>Venue:</strong> To be added later</p>
-        <a href="#" class="btn">Register Here</a>
-    </div>
 </section>
 
+<!-- Organisers Section -->
 <section>
-    <h2>Contact</h2>
-    <p><strong>Organisers:</strong> To be added later</p>
+    <h2>Contact the Organisers</h2>
+    <p class="centered"><strong>Organisers:</strong> To be added later</p>
 </section>
 
 <footer>
