@@ -117,16 +117,12 @@
         .session-card:hover .dropdown-content {
             display: block;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #004d4d;
-            color: white;
-            margin-top: 50px;
-        }
 
-        /* Responsive Styles */
+        /* Show dropdown content on mobile */
         @media (max-width: 768px) {
+            .dropdown-content {
+                display: block; /* Always show on mobile */
+            }
             header img {
                 width: 100px; /* Adjusted size for smaller screens */
             }
@@ -148,7 +144,7 @@
 <header>
     <img src="IITB-Logo.png" alt="IIT Bombay Logo">
     <h1>Workshop on Quantum Information and Quantum Dynamics</h1>
-    <img src="QuICST-Logo.png" alt="QuICST Logo" style="width: 140px;"> <!-- Further increased size for visibility -->
+    <img src="QuICST-Logo.png" alt="QuICST Logo" style="width: 180px;"> <!-- Further increased size for visibility -->
 </header>
 
 <!-- Registration Section -->
