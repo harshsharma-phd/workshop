@@ -147,6 +147,29 @@
             margin: 40px auto;
         }
 
+        /* Contact section */
+        .contact-info {
+            margin-top: 30px;
+            text-align: left;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #4267B2;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+        }
+
+        .icon {
+            margin-right: 8px;
+            color: #4267B2;
+        }
+        
         /* Footer */
         footer {
             background-color: #333;
@@ -239,7 +262,7 @@
             <div class="dropdown-content">
                 <p><strong>Title:</strong> Exotic Synchronisation of Time Crystals Outside Symmetric Subspaces</p>
                 <p><strong>Abstract:</strong> Exploring continuous time crystals (CTCs) within the symmetric subspace of spin systems has been a subject of intensive research in recent times. Thus far, the stability of the time-crystal phase outside the symmetric subspace in such spin systems has gone largely unexplored. Here, we show the effect of including the asymmetric subspaces on the dynamics of CTCs in a driven dissipative spin model. This results in multistability, and the dynamics become dependent on the initial state. Remarkably, this multistability leads to exotic synchronization regimes such as chimera states and cluster synchronization in an ensemble of coupled identical CTCs.</p>
-                <p><strong>Reference:</strong><a href="https://arxiv.org/abs/2401.00675">arXiv:2401.00675</a></p>
+                <p><strong>Reference:</strong> <a href="https://arxiv.org/abs/2401.00675">arXiv:2401.00675</a></p>
             </div>
         </div>
 
@@ -263,8 +286,8 @@
             <div class="session-title">Hoi-Kwan Lau</div>
             <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
             <div class="dropdown-content">
-                <p><strong>Title:</strong> To be added later</p>
-                <p><strong>Abstract:</strong> To be added later</p>
+                <p><strong>Title:</strong> Making quantum wave great again by using particles</p>
+                <p><strong>Abstract:</strong> Bosonic quantum systems are ubiquitous and exhibit many practical advantages. However, the linearity of the predominant control in these platforms impose limitations on how the encoded wave-like (continuous-variable, CV) information can be manipulated. In this talk, I will introduce two novel methods to resolve these limitations by harnessing the non-linearity of the hybrid interaction between bosonic modes and particle-like qubits. In the first half, I will discuss a scheme to download many-qubit entanglement from efficiently generable CV cluster states. Our scheme corresponds to a hybrid teleportation of the correlation embedded in CV entanglement, and can be implemented with interactions available in many bosonic platforms. By using an equivalent circuit model, we show that both finite squeezing errors and practical imperfections to be mapped to single qubit preparation errors, and suggest respective corrective measures. Particularly, we show that 12dB squeezing is sufficient for fault-tolerant quantum computing, and robust memory requires as low as 6dB squeezing. In the second half, I will discuss applying quantum signal processing (QSP) techniques to engineer non-Gaussian bosonic operations. We show that QSP generally reduces the gate time when comparing to direct implementation with resonant drives. The versatile QSP method can also implement new types of gate, such as the mod-k gate that can deterministic create multi-component Cat states and generically entangle multiple qudits, and measurements that are tailored for entanglement transfer and error correction.</p>
             </div>
         </div>
 
@@ -279,8 +302,8 @@
             <div class="session-title">Pavithran Iyer</div>
             <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
             <div class="dropdown-content">
-                <p><strong>Title:</strong> To be added later</p>
-                <p><strong>Abstract:</strong> To be added later</p>
+                <p><strong>Title:</strong> A Framework for Quantum Computation Using Gottesman Kitaev Preskill codes</p>
+                <p><strong>Abstract:</strong> I will introduce the Gottesman-Kitaev-Preskill (GKP) code, a method for encoding quantum information in continuous-variable states well-suited for optical hardware. Comparing other methods of encoding quantum information in optical states, I will outline the advantages of GKP codes from the perspective of experimental realization of quantum computation. I will explain the mathematical modeling of noise in optical devices and present quantum error correction techniques for GKP codes to protect the encoded logical information. Additionally, I will discuss how these methods can be integrated with traditional approaches, such as the quantum Low-Density Parity-Check codes and measurement-based quantum computation schemes.</p>
             </div>
         </div>
 
@@ -289,8 +312,8 @@
             <div class="session-title">Sudipto Singha Roy</div>
             <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
             <div class="dropdown-content">
-                <p><strong>Title:</strong> To be added later</p>
-                <p><strong>Abstract:</strong> To be added later</p>
+                <p><strong>Title:</strong> Link representation of entanglement entropy in quantum states</p>
+                <p><strong>Abstract:</strong> In this talk, I will present the “link representation formalism” that we introduced in our recent works, where we assume that entanglement entropy of any bipartition of a quantum state can be approximated as the sum of certain link strengths connecting internal and external sites. I will provide examples where this representation is exact, as well as discuss several non-exact cases where we can employ various approximation techniques, including tensor network states and both free and interacting modes. Additionally, we will demonstrate how this definition naturally gives rise to an entanglement contour for the system. Lastly, I will illustrate how this representation aids in extending the quasi-particle picture, which is valuable for understanding the growth of entanglement entropy in long-range initial states when subjected to a quench under a critical Hamiltonian. I will conclude with a brief overview of the ongoing extension work in this area.</p>
             </div>
         </div>
 
@@ -304,8 +327,8 @@
             <div class="session-title">Anindita Bera</div>
             <div class="dropdown" onclick="toggleDropdown(event)">More Info</div>
             <div class="dropdown-content">
-                <p><strong>Title:</strong> To be added later</p>
-                <p><strong>Abstract:</strong> To be added later</p>
+                <p><strong>Title:</strong> A class of optimal positive map in M<sub>n</sub></p>
+                <p><strong>Abstract:</strong> Positive maps provide a powerful tool for characterizing entanglement and hence plays a key role in various aspects of quantum information theory. In this talk, I will talk about a certain class of positive maps in the matrix algebra M<sub>n</sub> that consists of optimal maps, i.e. maps from which one cannot subtract any completely positive map without losing positivity. This class provides a generalization of a seminal Choi positive map in M<sub>3</sub>.</p>
             </div>
         </div>
 
@@ -329,7 +352,31 @@
 <section class="venue">
     <h2>Venue and Contact</h2>
     <p><strong>Room No. 23, Victor Menezes Convention Centre, IIT Bombay</strong></p>
-    <p>In case of any queries contact <strong>Himadri Shekhar Dhar</strong> at himadri.dhar@iitb.ac.in </p>
+    <div class="contact-info">
+        <h3>Convener</h3>
+        <div class="contact-item">
+            <strong>Himadri Shekhar Dhar</strong><br>
+            <i class="icon">📧</i><a href="mailto:himadri.dhar@iitb.ac.in">himadri.dhar@iitb.ac.in</a><br>
+            <i class="icon">📞</i>+91 9953044668
+        </div>
+        
+        <h3>Volunteers</h3>
+        <div class="contact-item">
+            <strong>Rahul Gupta</strong><br>
+            <i class="icon">📧</i><a href="mailto:rahul.quantumfield@iitb.ac.in">rahul.quantumfield@iitb.ac.in</a><br>
+            <i class="icon">📞</i>+91 9004268554
+        </div>
+        <div class="contact-item">
+            <strong>Harsh Sharma</strong><br>
+            <i class="icon">📧</i><a href="mailto:harsh.sharma@iitb.ac.in">harsh.sharma@iitb.ac.in</a><br>
+            <i class="icon">📞</i>+91 9644109901
+        </div>
+        <div class="contact-item">
+            <strong>Sudipta Das</strong><br>
+            <i class="icon">📧</i><a href="mailto:sudipta.qic@iitb.ac.in">sudipta.qic@iitb.ac.in</a><br>
+            <i class="icon">📞</i>+91 9749903272
+        </div>
+    </div>
 </section>
 
 <footer>
