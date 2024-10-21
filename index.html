@@ -34,8 +34,7 @@
         }
 
         header img {
-            margin: 0 15px;
-            max-width: auto;
+            width: 140px; /* Default size for both logos */
             height: auto;
         }
 
@@ -217,7 +216,7 @@
         /* Responsive Styling */
         @media (max-width: 768px) {
             header img {
-                max-width: 100px;
+                width: 120px;
             }
 
             header h1 {
@@ -235,6 +234,13 @@
 
             .contact-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* Media query for very small screens */
+        @media (max-width: 480px) {
+            header img {
+                width: 100px; /* Further reduce size for very small screens */
             }
         }
     </style>
